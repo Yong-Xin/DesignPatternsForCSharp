@@ -1,10 +1,13 @@
 ﻿using System;
 namespace DesignPatterns.SimpleFactory
 {
-    public class OperationMul
+    public class OperationMul : Operation
     {
-        public OperationMul()
+        public override double GetResult()
         {
+            double result = 0;
+            result = NumberA * NumberB;
+            return result;
         }
     }
 }
