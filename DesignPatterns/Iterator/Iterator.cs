@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPatterns.Iterator
 {
-    abstract class Iterator
+    public abstract class Iterator
     {
         public abstract object First();
         public abstract object Next();
