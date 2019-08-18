@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DesignPatterns.Iterator.IteratorForDotNet
 {
-    public class StudentList:IEnumerable
+    public class StudentList : IEnumerable
     {
         //public IEnumerator<Student> GetEnumerator()
         //{
@@ -12,9 +13,24 @@ namespace DesignPatterns.Iterator.IteratorForDotNet
         //    yield return new Student("东旭", "女");
         //}
 
-        public IEnumerator GetEnumerator()
+        public Student[] students;
+
+        public StudentList(Student[] sts)
+
         {
 
+            this.students = sts;
+
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int index = 0; index < this.students.Length; index++)
+            {
+                yield return students[index];
+            }
+
+            //return students.GetEnumerator();
         }
 
 

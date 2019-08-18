@@ -38,8 +38,14 @@ namespace ConsolePro
             //}
 
             //Iterator For DotNet
-            var studentList = new StudentList();
-            foreach (var s in studentList)
+
+            Student[] studentArray = new Student[4];
+            studentArray[0] = new Student("Rusty", "man");
+            studentArray[1] = new Student("Clunker", "man");
+            studentArray[2] = new Student("Zippy", "man");
+            studentArray[3] = new Student("Fred", "man");
+            var studentList = new StudentList(studentArray);
+            foreach (Student s in studentList)
             {
                 Console.WriteLine(s.Name);
             }
