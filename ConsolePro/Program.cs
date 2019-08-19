@@ -63,6 +63,9 @@ namespace ConsolePro
             context = new Context(new ConcreteStrategyC());
             context.ContextInterface();
 
+            ContextSimpleFactory contextSimpleFactory = new ContextSimpleFactory("A");
+            contextSimpleFactory.ContextInterface();
+
             /*********************Strategy End*************************/
         }
     }
