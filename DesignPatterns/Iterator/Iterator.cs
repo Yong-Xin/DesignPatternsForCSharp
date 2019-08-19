@@ -4,6 +4,9 @@ using System.Text;
 
 namespace DesignPatterns.Iterator
 {
+    /// <summary>
+    /// 迭代器
+    /// </summary>
     public abstract class Iterator
     {
         public abstract object First();

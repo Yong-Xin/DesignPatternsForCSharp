@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Iterator;
 using DesignPatterns.Iterator.IteratorForDotNet;
 using DesignPatterns.SimpleFactory;
+using DesignPatterns.Strategy;
 using System;
 
 namespace ConsolePro
@@ -39,16 +40,30 @@ namespace ConsolePro
 
             //Iterator For DotNet
 
-            Student[] studentArray = new Student[4];
-            studentArray[0] = new Student("Rusty", "man");
-            studentArray[1] = new Student("Clunker", "man");
-            studentArray[2] = new Student("Zippy", "man");
-            studentArray[3] = new Student("Fred", "man");
-            var studentList = new StudentList(studentArray);
-            foreach (Student s in studentList)
-            {
-                Console.WriteLine(s.Name);
-            }
+            //Student[] studentArray = new Student[4];
+            //studentArray[0] = new Student("Rusty", "man");
+            //studentArray[1] = new Student("Clunker", "man");
+            //studentArray[2] = new Student("Zippy", "man");
+            //studentArray[3] = new Student("Fred", "man");
+            //var studentList = new StudentList(studentArray);
+            //foreach (Student s in studentList)
+            //{
+            //    Console.WriteLine(s.Name);
+            //}
+            /*********************Iterator end*************************/
+
+            /*********************Strategy Start*************************/
+            Context context;
+            context = new Context(new ConcreteStrategyA());
+            context.ContextInterface();
+
+            context = new Context(new ConcreteStrategyB());
+            context.ContextInterface();
+
+            context = new Context(new ConcreteStrategyC());
+            context.ContextInterface();
+
+            /*********************Strategy End*************************/
         }
     }
 }

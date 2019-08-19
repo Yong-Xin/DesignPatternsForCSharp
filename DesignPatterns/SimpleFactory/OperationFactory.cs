@@ -1,6 +1,9 @@
 ﻿using System;
 namespace DesignPatterns.SimpleFactory
 {
+    /// <summary>
+    /// 简单工厂模式
+    /// </summary>
     public class OperationFactory
     {
         public static Operation CreateOperation(string operate)
